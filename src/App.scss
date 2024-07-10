@@ -1,0 +1,132 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1800px !important;
+  }
+}
+
+.app-container {
+  .header-container {
+    padding: 0 80px;
+    .btn-login {
+      border-radius: 5px;
+      margin-right: 15px;
+      padding: 0 15px; //nội dung cách viền
+      border: 1px solid #535353;
+      height: 40px;
+    }
+    .btn-signup {
+      border-radius: 5px;
+      margin-right: 15px;
+      padding: 0 15px;
+      background: rgb(61, 61, 61);
+      color: white;
+      &:hover {
+        background: black;
+      }
+    }
+    .navbar {
+      padding-top: 20px;
+      z-index: 10;
+      // opacity: 0.6;
+      background-color: rgba(0, 0, 0, 0) !important;
+      .nav-link {
+        &.active {
+          background-color: beige;
+          color: red;
+        }
+      }
+    }
+  }
+  .homepage-container {
+    .homepage-1 {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      .homepage-content {
+        overflow-y: auto;
+        padding: 100px;
+        max-width: 50%;
+        max-height: 100vh;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .title-1 {
+          font-size: 50px;
+          font-weight: 600;
+        }
+        .title-2 {
+          font-size: 30px;
+        }
+        .title-3 {
+          button {
+            border-radius: 5px;
+            height: 40px;
+            padding: 0 15px;
+            background-color: #303030;
+            color: white;
+            border: none;
+
+            &:hover {
+              background: black;
+            }
+          }
+        }
+      }
+      video {
+        position: absolute;
+        right: 0;
+        max-width: 50%;
+        max-height: 100%;
+        // top: 40px;
+        right: 0;
+        // object-fit: cover; /* Ensures the video covers the whole area */
+      }
+    }
+    .homepage-2 {
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(225, 188, 143, 0.899);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .form-control {
+        overflow-y: auto;
+        max-height: 100vh;
+        max-width: 25%;
+        text-align: center;
+        height: 35vh;
+        border-radius: 10px;
+        box-sizing: border-box;
+        button {
+          width: 70%;
+          border-radius: 20px;
+          margin-right: 15px;
+          padding: 0 15px;
+          height: 40px;
+          border: 1px solid #535353;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+        .link-registered-hiring {
+          font-size: small;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+.register-container {
+  .register-header {
+    height: 45px;
+    text-align: right;
+    padding: 5px 80px 0 80px;
+    button {
+      padding: 3px 15px;
+      margin-left: 15px;
+      border-radius: 5px;
+      background: #f9f9f9;
+      border: 1px solid;
+
+      &:hover {
+        background-color: white;
+      }
+    }
+  }
+  .register-header {
+    height: 45px;
+    text-align: right;
+    border: 1px solid red;
+    // display: flex;
+    // justify-content: flex-end;
+    // align-items: center;
+    padding: 5px 80px 5px 80px;
+    button {
+      border: 1px solid;
+      border-radius: 5px;
+      padding: 3px 15px;
+      margin: 0 15px;
+      background-color: rgba(243, 238, 238, 0.774);
+      &:hover {
+        background-color: white;
+      }
+    }
+  }
+  .register-title {
+    font-size: 25px;
+    padding: 20px 0;
+    text-align: center;
+  }
+  .register-welcome {
+    font-size: 20px;
+    padding: 10px 0;
+    text-align: center;
+  }
+  .register-content-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    input {
+      margin-bottom: 15px;
+      margin-top: 3px;
+    }
+    button {
+      width: 100%;
+      height: 35px;
+      border: none;
+      border-radius: 5px;
+      margin: 10px 0;
+      color: white;
+      background-color: black;
+      &:hover {
+        background-color: #2a2929e4;
+      }
+    }
+    .back-homepage {
+      cursor: pointer;
+    }
+    .pass-group {
+      position: relative;
+      .eye-icon {
+        position: absolute;
+        cursor: pointer;
+        right: 10px;
+        bottom: 20px;
+      }
+    }
+  }
+}

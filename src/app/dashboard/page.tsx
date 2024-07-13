@@ -3,6 +3,7 @@ import { useRouter } from "next/navigation";
 
 const dashboard = () => {
   const router = useRouter();
+
   const handleBtn = () => {
     router.push("/");
   };

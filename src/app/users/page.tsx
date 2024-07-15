@@ -1,18 +1,27 @@
 "use client";
-import AppTable from "@/components/app.table";
+import UsersTable from "@/components/users/users.table";
 import { useRouter } from "next/navigation";
 
-const dashboard = () => {
+const UserPage = async () => {
   const router = useRouter();
 
   const handleBtn = () => {
     router.push("/");
   };
 
+  const response = await fetch("http://localhost:8000/blogs", {
+    method: "GET",
+  });
+  const data = await response.json();
+
+  if (!data) {
+    return <div>loading...</div>;
+  }
+
   return (
     <>
       <div>
-        <AppTable />
+        <UsersTable blogs={data} />
       </div>
       <div>
         <button
@@ -25,4 +34,5 @@ const dashboard = () => {
     </>
   );
 };
-export default dashboard;
+
+export default UserPage;

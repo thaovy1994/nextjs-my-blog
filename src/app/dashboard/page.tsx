@@ -1,8 +1,7 @@
 "use client";
-import AppTable from "@/components/app.table";
 import { useRouter } from "next/navigation";
 
-const dashboard = () => {
+const Dashboard = () => {
   const router = useRouter();
 
   const handleBtn = () => {
@@ -11,9 +10,6 @@ const dashboard = () => {
 
   return (
     <>
-      <div>
-        <AppTable />
-      </div>
       <div>
         <button
           className="border-2 rounded-lg bg-slate-600 text-white p-1"
@@ -25,4 +21,4 @@ const dashboard = () => {
     </>
   );
 };
-export default dashboard;
+export default Dashboard;

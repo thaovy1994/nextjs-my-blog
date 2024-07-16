@@ -1,8 +1,15 @@
 "use client";
+import { IUser } from "@/types/backend";
 import Link from "next/link";
 import { CiSearch } from "react-icons/ci";
 
-const AppHeader = () => {
+interface IProps {
+  users: IUser[];
+}
+
+const AppHeader = (props: IProps) => {
+  const { users } = props;
+
   return (
     <>
       <nav className="bg-gray-800">
@@ -25,18 +32,20 @@ const AppHeader = () => {
                 >
                   User
                 </Link>
-                <a
+                <Link
                   href="/admin"
                   className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                  aria-current="page"
                 >
                   Admin
-                </a>
-                <a
-                  href="login"
+                </Link>
+                <Link
+                  href="/register"
                   className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                  aria-current="page"
                 >
-                  Log In
-                </a>
+                  Register
+                </Link>
                 <a
                   href="/logout"
                   className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
